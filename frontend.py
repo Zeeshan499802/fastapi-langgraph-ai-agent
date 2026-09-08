@@ -27,7 +27,7 @@ if "backend_started" not in st.session_state:
 
     time.sleep(5)
     st.session_state.backend_started = True
-    
+
 
 
 
@@ -54,7 +54,9 @@ allow_web_search = st.checkbox("Allow Web Search")
 
 user_query = st.text_area("Enter your query:", height=150, placeholder="Ask Anything!")
 
-API_URL = "http://127.0.0.1:8000/chat"
+# API_URL = "http://127.0.0.1:8000/chat"
+
+API_URL = "https://fastapi-langgraph-ai-agent-2.onrender.com/chat"
 
 # Step 2: Trigger Backend
 if st.button("Ask Agent!"):
